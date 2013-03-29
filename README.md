@@ -34,13 +34,13 @@ Add dependencied to your POM file:
 
    
     <dependency>
-        <groupId>com.cognifide.slice</groupId>
+        <groupId>com.cognifide.slice-addon</groupId>
         <artifactId>slice-cq56</artifactId>
         <version>1.0.0</version>
         <scope>compile</scope>
     </dependency>
     <dependency>
-        <groupId>com.cognifide.slice</groupId>
+        <groupId>com.cognifide.slice-addon</groupId>
         <artifactId>slice-cq56-taglib</artifactId>
         <version>1.0.0</version>
         <scope>compile</scope>
