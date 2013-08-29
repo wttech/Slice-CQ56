@@ -188,6 +188,7 @@ public class IncludeTag extends AbstractBodyTag {
 		IncludeOptions options = IncludeOptions.getOptions(request, true);
 		if (!decorationEnabled) {
 			options.forceSameContext(true);
+			options.setDecorationTagName(""); 
 		}
 
 		boolean wcmDisabled;
