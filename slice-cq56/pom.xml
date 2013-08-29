@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>com.cognifide.slice-addon</groupId>
 		<artifactId>slice-cq56-parent</artifactId>
-		<version>1.0.1-SNAPSHOT</version>
+		<version>1.0.1</version>
 	</parent>
 	<name>Slice - CQ 5.6 Add-on</name>
 	<description>Slice - CQ 5.6 Add-on</description>
