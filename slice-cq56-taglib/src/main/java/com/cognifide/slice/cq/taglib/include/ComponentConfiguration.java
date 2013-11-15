@@ -67,8 +67,9 @@ class ComponentConfiguration {
 
 	public void readFromComponent(Component component) {
 		ValueMap valueMap = component.getProperties();
-		if (valueMap == null) {
-			logger.warn("Resource '{}' adapts to null value map, skipping", component.getPath());
+		// isEmpty -> optimisation fix to leverage JcrPropertyMap caching
+		if (valueMap == null || valueMap.isEmpty()) {
+			logger.warn("Resource '{}' adapts to null or empty value map, skipping", component.getPath());
 		} else {
 			readDisableWcm(valueMap.get(DISABLE_WCM_PROPERTY));
 			readDecorationModes(valueMap.get(DECORATION_MODES_PROPERTY));
