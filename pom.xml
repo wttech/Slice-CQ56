@@ -3,7 +3,7 @@
 
 	<groupId>com.cognifide.slice-addon</groupId>
 	<artifactId>slice-cq56-parent</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3-SNAPSHOT</version>
 
 	<name>Slice - CQ Parent</name>
 	<url>http://cognifide.com/</url>
