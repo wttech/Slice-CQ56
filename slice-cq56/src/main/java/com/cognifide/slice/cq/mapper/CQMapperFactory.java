@@ -21,14 +21,13 @@ package com.cognifide.slice.cq.mapper;
  * limitations under the License.
  * #L%
  */
-
-
 import com.cognifide.slice.cq.mapper.processor.ImageFieldProcessor;
 import com.cognifide.slice.mapper.SlingMapperFactory;
 import com.cognifide.slice.mapper.api.Mapper;
+import com.cognifide.slice.mapper.api.MapperFactory;
 import com.google.inject.Inject;
 
-public class CQMapperFactory {
+public class CQMapperFactory implements MapperFactory {
 
 	private final SlingMapperFactory slingMapperFactory;
 
@@ -37,6 +36,7 @@ public class CQMapperFactory {
 		this.slingMapperFactory = slingMapperFactory;
 	}
 
+	@Override
 	public Mapper getMapper() {
 		final Mapper mapper = slingMapperFactory.getMapper();
 		mapper.registerFieldProcessor(new ImageFieldProcessor());
