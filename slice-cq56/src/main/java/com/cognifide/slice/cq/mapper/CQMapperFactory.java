@@ -24,23 +24,22 @@ package com.cognifide.slice.cq.mapper;
 
 
 import com.cognifide.slice.cq.mapper.processor.ImageFieldProcessor;
-import com.cognifide.slice.mapper.SlingMapperFactory;
+import com.cognifide.slice.mapper.SlingMapperBuilder;
 import com.cognifide.slice.mapper.api.Mapper;
 import com.google.inject.Inject;
 
 public class CQMapperFactory {
 
-	private final SlingMapperFactory slingMapperFactory;
+	private final SlingMapperBuilder slingMapperBuilder;
 
 	@Inject
-	public CQMapperFactory(final SlingMapperFactory slingMapperFactory) {
-		this.slingMapperFactory = slingMapperFactory;
+	public CQMapperFactory(final SlingMapperBuilder slingMapperBuilder) {
+		this.slingMapperBuilder = slingMapperBuilder;
 	}
 
 	public Mapper getMapper() {
-		final Mapper mapper = slingMapperFactory.getMapper();
-		mapper.registerFieldProcessor(new ImageFieldProcessor());
-		return mapper;
+		slingMapperBuilder.registerFieldProcessor(new ImageFieldProcessor());
+		return slingMapperBuilder.build();
 	}
 
 }
