@@ -21,14 +21,15 @@ package com.cognifide.slice.cq.mapper;
  * limitations under the License.
  * #L%
  */
-
-
 import com.cognifide.slice.cq.mapper.processor.ImageFieldProcessor;
 import com.cognifide.slice.mapper.SlingMapperBuilder;
 import com.cognifide.slice.mapper.api.Mapper;
+import com.cognifide.slice.mapper.api.MapperFactory;
+import com.cognifide.slice.mapper.api.processor.FieldPostProcessor;
+import com.cognifide.slice.mapper.api.processor.FieldProcessor;
 import com.google.inject.Inject;
 
-public class CQMapperFactory {
+public class CQMapperFactory implements MapperFactory {
 
 	private final SlingMapperBuilder slingMapperBuilder;
 
@@ -37,9 +38,30 @@ public class CQMapperFactory {
 		this.slingMapperBuilder = slingMapperBuilder;
 	}
 
+	@Override
 	public Mapper getMapper() {
 		slingMapperBuilder.registerFieldProcessor(new ImageFieldProcessor());
 		return slingMapperBuilder.build();
+	}
+
+	@Override
+	public void registerFieldProcessor(FieldProcessor fieldProcessor, Mapper mapper) {
+		mapper.registerFieldProcessor(fieldProcessor);
+	}
+
+	@Override
+	public void unregisterFieldProcessor(FieldProcessor fieldProcessor, Mapper mapper) {
+		mapper.unregisterFieldProcessor(fieldProcessor);
+	}
+
+	@Override
+	public void registerFieldPostProcessor(FieldPostProcessor fieldPostProcessor, Mapper mapper) {
+		mapper.registerFieldPostProcessor(fieldPostProcessor);
+	}
+
+	@Override
+	public void unregisterFieldPostProcessor(FieldPostProcessor fieldPostProcessor, Mapper mapper) {
+		mapper.unregisterFieldPostProcessor(fieldPostProcessor);
 	}
 
 }
