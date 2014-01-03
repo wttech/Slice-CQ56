@@ -36,7 +36,7 @@ public class CQMapperFactory {
 	}
 
 	public Mapper getMapper() {
-		return mapperBuilder.addDefaultSlingProcessors().addFieldProcessor(new ImageFieldProcessor()).build();
+		return mapperBuilder.addDefaultSliceProcessors().addFieldProcessor(new ImageFieldProcessor()).build();
 	}
 
 }
