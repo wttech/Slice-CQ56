@@ -28,15 +28,15 @@ import com.google.inject.Inject;
 
 public class CQMapperFactory {
 
-	private final MapperBuilder slingMapperBuilder;
+	private final MapperBuilder mapperBuilder;
 
 	@Inject
-	public CQMapperFactory(final MapperBuilder slingMapperBuilder) {
-		this.slingMapperBuilder = slingMapperBuilder;
+	public CQMapperFactory(final MapperBuilder mapperBuilder) {
+		this.mapperBuilder = mapperBuilder;
 	}
 
 	public Mapper getMapper() {
-		return slingMapperBuilder.addDefaultSlingProcessors().addFieldProcessor(new ImageFieldProcessor()).build();
+		return mapperBuilder.addDefaultSlingProcessors().addFieldProcessor(new ImageFieldProcessor()).build();
 	}
 
 }
