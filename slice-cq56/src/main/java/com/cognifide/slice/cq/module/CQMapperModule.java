@@ -24,9 +24,13 @@ package com.cognifide.slice.cq.module;
 
 
 import com.cognifide.slice.api.scope.ContextScoped;
-import com.cognifide.slice.cq.mapper.CQMapperFactory;
+import com.cognifide.slice.commons.provider.SliceResourceProvider;
+import com.cognifide.slice.cq.mapper.processor.ImageFieldProcessor;
+import com.cognifide.slice.mapper.MapperBuilder;
+import com.cognifide.slice.mapper.annotation.SliceResource;
 import com.cognifide.slice.mapper.api.Mapper;
 import com.google.inject.AbstractModule;
+import com.google.inject.Inject;
 import com.google.inject.Provides;
 
 /**
@@ -36,6 +40,9 @@ import com.google.inject.Provides;
  */
 public class CQMapperModule extends AbstractModule {
 
+	@Inject
+	private MapperBuilder mapperBuilder;
+	
 	@Override
 	protected void configure() {
 	}
@@ -43,14 +50,12 @@ public class CQMapperModule extends AbstractModule {
 	/**
 	 * Builds and provides {@link Mapper}
 	 * 
-	 * @param sliceResourceFieldProcessor
-	 * @param sliceReferenceFieldProcessor
 	 * @return
 	 */
 	@Provides
 	@ContextScoped
-	public Mapper getMapper(final CQMapperFactory mapperFactory) {
-		return mapperFactory.getMapper();
+	public Mapper getMapper() {
+		return mapperBuilder.addDefaultSliceProcessors().addFieldProcessor(new ImageFieldProcessor()).build();
 	}
 
 }
