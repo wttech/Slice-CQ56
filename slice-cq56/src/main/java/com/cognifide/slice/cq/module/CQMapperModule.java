@@ -1,6 +1,6 @@
 package com.cognifide.slice.cq.module;
 
-/*
+/*-
  * #%L
  * Slice - CQ Add-on
  * $Id:$
@@ -22,27 +22,15 @@ package com.cognifide.slice.cq.module;
  * #L%
  */
 
-
 import com.cognifide.slice.api.scope.ContextScoped;
-import com.cognifide.slice.commons.provider.SliceResourceProvider;
 import com.cognifide.slice.cq.mapper.processor.ImageFieldProcessor;
 import com.cognifide.slice.mapper.MapperBuilder;
-import com.cognifide.slice.mapper.annotation.SliceResource;
 import com.cognifide.slice.mapper.api.Mapper;
 import com.google.inject.AbstractModule;
-import com.google.inject.Inject;
 import com.google.inject.Provides;
 
-/**
- * The module is responsible for finding all classes annotated by {@link SliceResource}. Found classes are
- * bound to their {@link SliceResourceProvider} providers
- * 
- */
 public class CQMapperModule extends AbstractModule {
 
-	@Inject
-	private MapperBuilder mapperBuilder;
-	
 	@Override
 	protected void configure() {
 	}
@@ -54,8 +42,9 @@ public class CQMapperModule extends AbstractModule {
 	 */
 	@Provides
 	@ContextScoped
-	public Mapper getMapper() {
-		return mapperBuilder.addDefaultSliceProcessors().addFieldProcessor(new ImageFieldProcessor()).build();
+	public Mapper getMapper(MapperBuilder mapperBuilder) {
+		ImageFieldProcessor imageProcessor = new ImageFieldProcessor();
+		return mapperBuilder.addDefaultSliceProcessors().addFieldProcessor(imageProcessor).build();
 	}
 
 }
