@@ -1,6 +1,6 @@
 package com.cognifide.slice.cq.taglib;
 
-/*
+/*-
  * #%L
  * Slice - CQ Taglib
  * $Id:$
@@ -40,10 +40,11 @@ import com.cognifide.slice.commons.link.LinkExternalizerImpl;
  * defined, but if it's value is empty, it will not be rendered.
  * 
  * Additionally, this tag supports externalisation of handles passed in a href attribute.
- * 
+ * @deprecated It will be removed (along with whole cq56-taglib) in next major version - custom solution required
  * @author Albert Cenkier
  * @author Jan Kuźniak
  */
+@Deprecated
 public class AnchorTag extends AbstractBodyTag {
 
 	private static final long serialVersionUID = 2811258272922488176L;

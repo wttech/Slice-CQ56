@@ -1,6 +1,6 @@
 package com.cognifide.slice.cq.module;
 
-/*
+/*-
  * #%L
  * Slice - CQ Add-on
  * $Id:$
@@ -22,7 +22,6 @@ package com.cognifide.slice.cq.module;
  * #L%
  */
 
-
 import org.apache.sling.api.request.RequestPathInfo;
 
 import com.cognifide.slice.api.link.Link;
@@ -32,6 +31,11 @@ import com.cognifide.slice.cq.qualifier.RequestedPagePath;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 
+/**
+ * 
+ * @deprecated It will be removed (along with whole Link API) in next major version - custom solution required
+ * 
+ */
 public final class LinkModule extends AbstractModule {
 
 	@Override

@@ -1,6 +1,6 @@
 package com.cognifide.slice.cq.taglib;
 
-/*
+/*-
  * #%L
  * Slice - CQ Taglib
  * $Id:$
@@ -22,7 +22,6 @@ package com.cognifide.slice.cq.taglib;
  * #L%
  */
 
-
 import java.io.PrintWriter;
 
 import javax.servlet.jsp.PageContext;
@@ -34,9 +33,12 @@ import org.apache.commons.lang.StringUtils;
  * Catches exceptions and renders their stack traces surrounded with <tt>&lt;pre&gt;</tt> tags, or as HTML
  * comments.
  * 
+ * @deprecated It will be removed (along with whole cq56-taglib) in next major version - custom solution
+ * required
  * @author Albert Cenkier
  * @author Jan Kuźniak
  */
+@Deprecated
 public class CatchTag extends AbstractBodyTag implements TryCatchFinally {
 	private static final long serialVersionUID = 3338066321193727755L;
 

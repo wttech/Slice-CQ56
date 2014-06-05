@@ -1,6 +1,6 @@
 package com.cognifide.slice.cq.taglib;
 
-/*
+/*-
  * #%L
  * Slice - CQ Taglib
  * $Id:$
@@ -22,7 +22,6 @@ package com.cognifide.slice.cq.taglib;
  * #L%
  */
 
-
 import javax.servlet.jsp.JspException;
 
 import com.cognifide.slice.api.link.LinkExternalizer;
@@ -33,10 +32,13 @@ import com.cognifide.slice.commons.link.LinkExternalizerImpl;
  * Externalises given handle using {@link LinkUtils#externaliseContentHandle(String, String, String)} (see
  * detailed description there);
  * 
+ * @deprecated It will be removed (along with whole cq56-taglib) in next major version - custom solution
+ * required
  * @author Albert Cenkier
  * @author Jan Kuźniak
  * @see LinkUtils#externaliseContentHandle(String, String, String)
  */
+@Deprecated
 public class ExternaliseTag extends AbstractBodyTag {
 	private static final long serialVersionUID = -3498559033987132975L;
 

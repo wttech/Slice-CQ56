@@ -1,6 +1,6 @@
 package com.cognifide.slice.cq.taglib.mobile;
 
-/*
+/*-
  * #%L
  * Slice - CQ Taglib
  * $Id:$
@@ -22,7 +22,6 @@ package com.cognifide.slice.cq.taglib.mobile;
  * #L%
  */
 
-
 import javax.servlet.jsp.JspTagException;
 
 import com.cognifide.slice.cq.taglib.AbstractBodyTag;
@@ -31,8 +30,11 @@ import com.day.cq.wcm.mobile.api.device.DeviceGroup;
 /**
  * Inserts CQ5.4 mobile emulator includes - to be used in the head section.
  * 
+ * @deprecated It will be removed (along with whole cq56-taglib) in next major version - custom solution
+ * required
  * @author Jan Kuźniak
  */
+@Deprecated
 public class IncludeEmulatorTag extends AbstractBodyTag {
 
 	private static final long serialVersionUID = 6727907904192317011L;

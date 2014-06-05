@@ -1,6 +1,6 @@
 package com.cognifide.slice.cq.qualifier;
 
-/*
+/*-
  * #%L
  * Slice - CQ Add-on
  * $Id:$
@@ -22,7 +22,6 @@ package com.cognifide.slice.cq.qualifier;
  * #L%
  */
 
-
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.ElementType.PARAMETER;
@@ -36,6 +35,7 @@ import com.google.inject.BindingAnnotation;
 /**
  * The page that was requested (basically that means the page referenced by remote request).
  * 
+ * @deprecated It will be removed (along with whole Link API) in next major version - custom solution required
  * @author witoldsz
  * @see Path
  * @see CurrentPage
@@ -43,6 +43,7 @@ import com.google.inject.BindingAnnotation;
 @BindingAnnotation
 @Target({ FIELD, PARAMETER, METHOD })
 @Retention(RUNTIME)
+@Deprecated
 public @interface RequestedLink {
 
 }

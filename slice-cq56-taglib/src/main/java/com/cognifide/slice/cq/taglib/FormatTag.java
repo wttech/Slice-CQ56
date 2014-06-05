@@ -1,6 +1,6 @@
 package com.cognifide.slice.cq.taglib;
 
-/*
+/*-
  * #%L
  * Slice - CQ Taglib
  * $Id:$
@@ -22,7 +22,6 @@ package com.cognifide.slice.cq.taglib;
  * #L%
  */
 
-
 import java.io.Writer;
 import java.util.Formatter;
 import java.util.Locale;
@@ -34,9 +33,12 @@ import org.apache.commons.lang.StringUtils;
 /**
  * Formats value given a format and optional locale. Format is specified using printf-style format strings.
  * 
+ * @deprecated It will be removed (along with whole cq56-taglib) in next major version - custom solution
+ * required
  * @author Marcin Cenkier
  * @author Jan Kuźniak
  */
+@Deprecated
 public class FormatTag extends AbstractBodyTag {
 	private static final long serialVersionUID = 6142420426315191239L;
 
