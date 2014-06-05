@@ -1,6 +1,6 @@
 package com.cognifide.slice.cq.taglib;
 
-/*
+/*-
  * #%L
  * Slice - CQ Taglib
  * $Id:$
@@ -22,7 +22,6 @@ package com.cognifide.slice.cq.taglib;
  * #L%
  */
 
-
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.BodyTagSupport;
 
@@ -33,9 +32,12 @@ import org.slf4j.LoggerFactory;
 /**
  * Implements {@link Tag} interface and provides common base for other tags.
  * 
+ * @deprecated It will be removed (along with whole cq56-taglib) in next major version - custom solution
+ * required
  * @author Albert Cenkier
  * @author Jan Kuźniak
  */
+@Deprecated
 public abstract class AbstractBodyTag extends BodyTagSupport {
 	private static final long serialVersionUID = 1L;
 

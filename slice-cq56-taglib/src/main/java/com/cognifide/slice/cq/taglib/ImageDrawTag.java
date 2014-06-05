@@ -1,6 +1,6 @@
 package com.cognifide.slice.cq.taglib;
 
-/*
+/*-
  * #%L
  * Slice - CQ Taglib
  * $Id:$
@@ -22,7 +22,6 @@ package com.cognifide.slice.cq.taglib;
  * #L%
  */
 
-
 import java.io.IOException;
 
 import javax.servlet.jsp.JspException;
@@ -32,6 +31,11 @@ import javax.servlet.jsp.tagext.TagSupport;
 import com.day.cq.wcm.api.components.DropTarget;
 import com.day.cq.wcm.foundation.Image;
 
+/**
+ * @deprecated It will be removed (along with whole cq56-taglib) in next major version - custom solution
+ * required
+ * 
+ */
 public class ImageDrawTag extends TagSupport {
 
 	private static final long serialVersionUID = 8649634583655503247L;

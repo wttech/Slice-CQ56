@@ -36,7 +36,9 @@ import com.day.cq.wcm.api.components.Component;
 
 /**
  * Represents tag specific's configuration stored in a component node. Has both default values and read logic.
+ * @deprecated It will be removed (along with whole cq56-taglib) in next major version - custom solution required
  */
+@Deprecated
 class ComponentConfiguration {
 
 	/** name of the component's property for disabling WCM.= */

@@ -43,10 +43,13 @@ import com.day.cq.wcm.api.components.IncludeOptions;
  * done either at component level - using custom properties stored in a component's node, or at the include
  * level - using tag's attributes. Tag's attributes have higher priority than component's meta-data.
  * 
+ * @deprecated It will be removed (along with whole cq56-taglib) in next major version - custom solution
+ * required
  * @author Jan Kuźniak
  * @author Witold Szczerba
  * @author maciej.majchrzak
  */
+@Deprecated
 public class IncludeTag extends AbstractBodyTag {
 
 	private static final long serialVersionUID = -214258163075048064L;
@@ -188,7 +191,7 @@ public class IncludeTag extends AbstractBodyTag {
 		IncludeOptions options = IncludeOptions.getOptions(request, true);
 		if (!decorationEnabled) {
 			options.forceSameContext(true);
-			options.setDecorationTagName(""); 
+			options.setDecorationTagName("");
 		}
 
 		boolean wcmDisabled;

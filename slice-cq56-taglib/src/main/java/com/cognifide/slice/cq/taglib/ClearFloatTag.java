@@ -1,6 +1,6 @@
 package com.cognifide.slice.cq.taglib;
 
-/*
+/*-
  * #%L
  * Slice - CQ Taglib
  * $Id:$
@@ -22,7 +22,6 @@ package com.cognifide.slice.cq.taglib;
  * #L%
  */
 
-
 import java.io.IOException;
 
 import javax.servlet.jsp.JspTagException;
@@ -31,9 +30,12 @@ import javax.servlet.jsp.JspTagException;
  * Inserts <code>&lt;div style="clear:both"&gt;&#38;nbsp;&lt;/div&gt;</code> if the render attribute is set to
  * true.
  * 
+ * @deprecated It will be removed (along with whole cq56-taglib) in next major version - custom solution
+ * required
  * @author Albert Cenkier
  * @author Jan Kuźniak
  */
+@Deprecated
 public class ClearFloatTag extends AbstractBodyTag {
 	private static final long serialVersionUID = 64260309540567509L;
 

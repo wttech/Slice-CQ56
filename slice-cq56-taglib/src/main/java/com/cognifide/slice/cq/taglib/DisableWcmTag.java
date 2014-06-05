@@ -1,6 +1,6 @@
 package com.cognifide.slice.cq.taglib;
 
-/*
+/*-
  * #%L
  * Slice - CQ Taglib
  * $Id:$
@@ -22,11 +22,15 @@ package com.cognifide.slice.cq.taglib;
  * #L%
  */
 
-
 import javax.servlet.jsp.JspException;
 
 import com.day.cq.wcm.api.WCMMode;
 
+/**
+ * @deprecated It will be removed (along with whole cq56-taglib) in next major version - custom solution
+ * required
+ * 
+ */
 public class DisableWcmTag extends AbstractBodyTag {
 
 	private static final long serialVersionUID = -8045328616424811060L;
