@@ -25,7 +25,6 @@
 
 	<modules>
 		<module>slice-cq56</module>
-		<module>slice-cq56-taglib</module>
 		<module>slice-cq56-assembly</module>
 	</modules>
 

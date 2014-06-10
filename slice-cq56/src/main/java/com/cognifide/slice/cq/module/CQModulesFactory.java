@@ -25,7 +25,6 @@ public class CQModulesFactory {
 	 * <li>{@link DamModule}</li>
 	 * <li>{@link CurrentPageModule}</li>
 	 * <li>{@link RequestedPageModule}</li>
-	 * <li>{@link LinkModule}</li>
 	 * <li>{@link TemplateModule}</li>
 	 * </ul>
 	 * 
@@ -38,7 +37,6 @@ public class CQModulesFactory {
 		modules.add(new DamModule());
 		modules.add(new CurrentPageModule());
 		modules.add(new RequestedPageModule());
-		modules.add(new LinkModule());
 		modules.add(new TemplateModule());
 		return modules;
 	}
