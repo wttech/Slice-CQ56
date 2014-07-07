@@ -3,7 +3,7 @@
 
 	<groupId>com.cognifide.slice-addon</groupId>
 	<artifactId>slice-cq56-parent</artifactId>
-	<version>2.0.0-SNAPSHOT</version>
+	<version>2.0.1-SNAPSHOT</version>
 
 	<name>Slice - CQ Parent</name>
 	<url>http://cognifide.com/</url>
@@ -36,7 +36,7 @@
 		<maven.compiler.version>1.6</maven.compiler.version>
 		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 		
-		<slice.version>4.0.1-incubator-SNAPSHOT</slice.version>
+		<slice.version>4.0.0</slice.version>
 		
 		<maven.test.skip>false</maven.test.skip>
 		<site.root>.\src\main\resources</site.root>
@@ -56,7 +56,8 @@
 		<connection>scm:git:https://github.com/Cognifide/Slice-CQ56.git</connection>
 		<url>scm:git:https://github.com/Cognifide/Slice-CQ56.git</url>
 		<developerConnection>scm:git|https://github.com/Cognifide/Slice-CQ56.git</developerConnection>
-	</scm>
+	  <tag>HEAD</tag>
+  </scm>
 	
 	<developers>
 		<developer>
@@ -138,7 +139,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.2</version>
+				<version>2.5</version>
 				<configuration>
 					<username>${scm.username}</username>
 					<password>${scm.password}</password>
