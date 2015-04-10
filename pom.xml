@@ -36,7 +36,7 @@
 		<maven.compiler.version>1.6</maven.compiler.version>
 		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 		
-		<slice.version>4.0.0</slice.version>
+		<slice.version>4.2.0-SNAPSHOT</slice.version>
 		
 		<maven.test.skip>false</maven.test.skip>
 		<site.root>.\src\main\resources</site.root>
@@ -284,6 +284,12 @@
 			</dependency>
 			<dependency>
 				<groupId>com.cognifide.slice</groupId>
+				<artifactId>slice-core-api</artifactId>
+				<version>${slice.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.cognifide.slice</groupId>
 				<artifactId>slice-mapper-api</artifactId>
 				<version>${slice.version}</version>
 				<scope>provided</scope>
@@ -370,14 +376,6 @@
 				<groupId>org.apache.felix</groupId>
 				<artifactId>org.apache.felix.scr.annotations</artifactId>
 				<version>1.6.0</version>
-				<scope>provided</scope>
-			</dependency>
-			
-			<!-- Apache Sling -->
-			<dependency>
-				<groupId>org.apache.sling</groupId>
-				<artifactId>org.apache.sling.api</artifactId>
-				<version>2.2.0</version>
 				<scope>provided</scope>
 			</dependency>
 
