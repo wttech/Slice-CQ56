@@ -36,7 +36,7 @@
 		<maven.compiler.version>1.6</maven.compiler.version>
 		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 		
-		<slice.version>4.2.0-SNAPSHOT</slice.version>
+		<slice.version>4.2.0</slice.version>
 		
 		<maven.test.skip>false</maven.test.skip>
 		<site.root>.\src\main\resources</site.root>
