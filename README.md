@@ -28,7 +28,7 @@ Checkout the source code:
 
 Compile and install:
 
-    mvn clean package install
+    mvn clean install
 
 ## Usage
 
