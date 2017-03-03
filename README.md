@@ -3,6 +3,8 @@
 Slice-CQ56
 ========
 
+![Slice logo](https://github.com/Cognifide/Slice/raw/master/assets/slice_logo.png)
+
 ## Purpose
 
 This is add-on which extends [Slice](https://github.com/Cognifide/Slice) functionality to support CQ version 5.6. It defines additional Guice modules which provides CQ-specific objects like Page, PageManager, etc.
