@@ -1,15 +1,15 @@
-![Cognifide logo](https://assets.cognifide.com/github/cognifide-logo.png)
+![Wunderman Thompson Technology logo](./assets/wtt-logo.png)
 
 Slice-CQ56
 ========
 
-![Slice logo](https://github.com/Cognifide/Slice/raw/master/assets/slice_logo.png)
+![Slice logo](https://github.com/wttech/Slice/raw/master/assets/slice_logo.png)
 
 ## Purpose
 
-This is add-on which extends [Slice](https://github.com/Cognifide/Slice) functionality to support CQ version 5.6. It defines additional Guice modules which provides CQ-specific objects like Page, PageManager, etc.
+This is add-on which extends [Slice](https://github.com/wttech/Slice) functionality to support CQ version 5.6. It defines additional Guice modules which provides CQ-specific objects like Page, PageManager, etc.
 
-Slice - a framework which simplifies Sling/CQ development by using dependency injection pattern and mapping Sling resources into Java objects. Slice repository: https://github.com/Cognifide/Slice
+Slice - a framework which simplifies Sling/CQ development by using dependency injection pattern and mapping Sling resources into Java objects. Slice repository: https://github.com/wttech/Slice
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ Slice and all add-ons are available from Maven Central Repo. However if you want
 Checkout the source code:
 
     cd [folder of your choice]
-    git clone git://github.com/Cognifide/Slice-CQ56.git
+    git clone git://github.com/wttech/Slice-CQ56.git
     cd Slice-CQ56
 
 Compile and install:
